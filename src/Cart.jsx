@@ -73,7 +73,7 @@ const Cart = () => {
           (
             <div>
               <PaymentForm totalPrice={totalPrice} />
-              <p>Welcome, {user.email}!</p>
+              <p className='mt-3'>Welcome, {user.email}!</p>
               <Logout />
             </div>
           )
