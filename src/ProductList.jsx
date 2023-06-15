@@ -65,7 +65,7 @@ const ProductList = () => {
             <div className='d-flex justify-content-center align-items-center' style={{marginTop:"12rem"}}>
 
             
-            <div class="spinner-grow text-info" style={{ height: "15rem", width: "15rem"}} role="status">
+            <div class="spinner-grow" style={{ height: "15rem", width: "15rem",backgroundColor:"#d63384"}} role="status">
                 <span class="visually-hidden">Loading...</span>
             </div>
             </div>

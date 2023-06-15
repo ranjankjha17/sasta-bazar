@@ -1,6 +1,6 @@
 import { faBackward } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import React, { useEffect, useState } from 'react'
+import React, { useEffect} from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom';
 import PaymentForm from './PaymentForm';
@@ -18,7 +18,6 @@ const Cart = () => {
   totalPrice = Math.round((totalPrice + Number.EPSILON) * 100) / 100
   console.log(totalPrice)
   const [user] = useAuthState(auth);
-  const [loading, setLoading] = useState(true)
   useEffect(() => {
     if (user) {
       localStorage.setItem('user', JSON.stringify(user));
@@ -56,7 +55,7 @@ const Cart = () => {
                   </div>
                 </td>
                 <td>${product.price * product.quantity}</td>
-                <td><button className="btn btn-danger" onClick={() => dispatch(removeFromCart(product))}>Remove</button></td>
+                <td><button className='btn btn-default' style={{border:"1px solid #d63384"}} onClick={() => dispatch(removeFromCart(product))}>Remove</button></td>
               </tr>
             ))}
             <tr>

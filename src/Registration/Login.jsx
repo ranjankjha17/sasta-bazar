@@ -48,7 +48,7 @@ const Login = () => {
     };
     return (
         <>
-            <main className='d-flex justify-content-center'>
+            <main className='d-flex justify-content-center mt-5'>
                 <section>
                     <div>
                         <h1>Login </h1>
@@ -88,8 +88,9 @@ const Login = () => {
                             <div className='mb-3'>
                                 <button
                                 type='button'
-                                className='btn btn-primary'
-                                    onClick={onLogin}
+                                className='btn btn-default'
+                                style={{backgroundColor:"#d63384",color:"#ffffff"}}
+                                onClick={onLogin}
                                 >
                                     Login
                                 </button>

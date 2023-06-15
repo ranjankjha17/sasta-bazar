@@ -2,7 +2,6 @@ import React, {useState} from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
 import {  createUserWithEmailAndPassword  } from 'firebase/auth';
 import { auth } from '../firebase';
-import { Alert } from 'bootstrap';
 const Signup = () => {
     const navigate = useNavigate();
  
@@ -19,7 +18,6 @@ const Signup = () => {
             console.log(user);
             navigate("/login")
             setError("");
-            // ...
         })
         .catch((error) => {
             const errorCode = error.code;
@@ -33,7 +31,7 @@ const Signup = () => {
     }
    
   return (
-    <main  className='d-flex justify-content-center'>        
+    <main  className='d-flex justify-content-center mt-5'>        
         <section>
            
                 <div>                  
@@ -56,33 +54,7 @@ const Signup = () => {
                                     onChange={(e) => setEmail(e.target.value)}
                                 />
                     </div>                                                                                            
-                        {/* <div>
-                            <label htmlFor="email-address">
-                                Email address
-                            </label>
-                            <input
-                                type="email"
-                                label="Email address"
-                                value={email}
-                                onChange={(e) => setEmail(e.target.value)}  
-                                required                                    
-                                placeholder="Email address"                                
-                            />
-                        </div> */}
-
-                        {/* <div>
-                            <label htmlFor="password">
-                                Password
-                            </label>
-                            <input
-                                type="password"
-                                label="Create password"
-                                value={password}
-                                onChange={(e) => setPassword(e.target.value)} 
-                                required                                 
-                                placeholder="Password"              
-                            />
-                        </div> */}
+                        
 
                          <div className="mb-3">
                                 <label htmlFor="password" className="form-label">
@@ -99,18 +71,13 @@ const Signup = () => {
                                     onChange={(e) => setPassword(e.target.value)}
                                 />
                             </div>                                             
-                        
-                        {/* <button
-                            type="submit" 
-                            onClick={onSubmit}                        
-                        >  
-                            Sign up                                
-                        </button> */}
+              
                         <div className='mb-3'>
                                 <button
                                 type='button'
-                                className='btn btn-primary'
-                                    onClick={onSubmit}
+                                className='btn btn-default'
+                                style={{backgroundColor:"#d63384",color:"#ffffff"}}
+                                onClick={onSubmit}
                                 >
                                     Sign up  
                                 </button>

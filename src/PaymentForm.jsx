@@ -82,7 +82,7 @@ const handlePayment = async () => {
           <label htmlFor="phone" className="form-label">Phone</label>
           <input type="tel" className="form-control" id="phone" placeholder="Enter your phone number" value={phone} onChange={e => setPhone(e.target.value)} />
         </div>
-        <button type="button" className="btn btn-primary" onClick={handlePayment}>Pay ${totalPrice}</button>
+        <button type="button" className="btn btn-default" style={{backgroundColor:"#d63384",color:"#ffffff"}} onClick={handlePayment}>Pay ${totalPrice}</button>
         {error && <div className="alert alert-danger mt-3">{error}</div>}
       </form>
     </div>

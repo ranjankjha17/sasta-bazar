@@ -6,7 +6,7 @@ const Logout = () => {
     localStorage.removeItem('user');
   };
 
-  return <button onClick={handleLogout}>Logout</button>;
+  return <button onClick={handleLogout} className='btn btn-default' style={{border:"1px solid #d63384"}}>Logout</button>;
 };
 
 export default Logout;
