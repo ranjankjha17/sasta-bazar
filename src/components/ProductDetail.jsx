@@ -1,7 +1,7 @@
 import React from 'react'
 import { useLocation } from 'react-router-dom';
 import { useDispatch } from 'react-redux'
-import { addToCart } from './productsSlice'
+import { addToCart } from '../productsSlice'
 import CartIcon from './CartIcon';
 const ProductDetail = () => {
     const dispatch = useDispatch()

@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useEffect} from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom';
-import PaymentForm from './PaymentForm';
+import PaymentForm from './components/PaymentForm';
 import { decrementQuantity, incrementQuantity, removeFromCart } from './productsSlice';
 import { auth } from './firebase.js';
 import { useAuthState } from 'react-firebase-hooks/auth';

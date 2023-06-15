@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import {  useDispatch } from 'react-redux';
-import {  clearCart } from './productsSlice';
+import {  clearCart } from '../productsSlice';
 import { useAuthState } from 'react-firebase-hooks/auth';
-import { auth } from './firebase.js';
+import { auth } from '../firebase.js';
 
 
 const PaymentForm = ({totalPrice}) => {

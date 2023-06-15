@@ -1,8 +1,8 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import CartIcon from './CartIcon'
-import Product from './Product'
+import CartIcon from './components/CartIcon'
+import Product from './components/Product'
 import { setSortBy } from './productsSlice'
 const ProductList = () => {
     const [isLoading, setIsLoading] = useState(true);
@@ -90,7 +90,7 @@ const ProductList = () => {
                     />
                 </div>
                 <div className='col-lg-4 mt-1' style={{ justifyContent: "end", display: "flex" }}>
-                    <CartIcon />
+                    <CartIcon/>
                 </div>
 
 
