@@ -48,42 +48,47 @@ const Login = () => {
     };
     return (
         <>
-            <main >
+            <main className='d-flex justify-content-center'>
                 <section>
                     <div>
                         <h1>Login </h1>
                        
                         <form>
-                            <div>
-                                <label htmlFor="email-address">
-                                    Email address
+                       
+                            <div className="mb-3">
+                                <label htmlFor="email" className="form-label">
+                                    Email
                                 </label>
                                 <input
-                                    id="email-address"
+                                    id="email"
                                     name="email"
                                     type="email"
+                                    className="form-control"
                                     required
-                                    placeholder="Email address"
+                                    placeholder="Enter your Email"
                                     onChange={(e) => setEmail(e.target.value)}
                                 />
                             </div>
 
-                            <div>
-                                <label htmlFor="password">
+                            <div className="mb-3">
+                                <label htmlFor="password" className="form-label">
                                     Password
                                 </label>
                                 <input
                                     id="password"
                                     name="password"
                                     type="password"
+                                    className="form-control"
                                     required
-                                    placeholder="Password"
+                                    placeholder="Enter your Password"
                                     onChange={(e) => setPassword(e.target.value)}
                                 />
                             </div>
 
-                            <div>
+                            <div className='mb-3'>
                                 <button
+                                type='button'
+                                className='btn btn-primary'
                                     onClick={onLogin}
                                 >
                                     Login
@@ -91,7 +96,7 @@ const Login = () => {
                             </div>
                         </form>
                         {error && <Alert variant="danger">{error}</Alert>}
-
+                        <div style={{textAlign:"center"}} className='mb-3'>OR</div>
                         <div>
                             <GoogleButton
                                 className="g-btn"
@@ -99,7 +104,7 @@ const Login = () => {
                                 onClick={handleGoogleSignIn}
                             />
                         </div>
-                        <p className="text-sm text-primary text-center">
+                        <p className="text-sm text-primary text-center mt-3">
                             No account yet? {' '}
                             <NavLink to="/signup">
                                 Sign up

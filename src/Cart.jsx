@@ -69,7 +69,7 @@ const Cart = () => {
           </tbody>
         </table>
       </div>
-      <div>
+      <div className='d-flex justify-content-center'>
         {user ?
           (
             <div>

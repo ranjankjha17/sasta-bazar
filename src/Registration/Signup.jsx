@@ -33,15 +33,30 @@ const Signup = () => {
     }
    
   return (
-    <main >        
+    <main  className='d-flex justify-content-center'>        
         <section>
-            <div>
+           
                 <div>                  
                     <h1> SignUp </h1>
                     
                                                                             
-                    <form>                                                                                            
-                        <div>
+                    <form>
+                    <div className="mb-3">
+                                <label htmlFor="email" className="form-label">
+                                    Email
+                                </label>
+                                <input
+                                    id="email"
+                                    name="email"
+                                    type="email"
+                                    className="form-control"
+                                    required
+                                    placeholder="Enter your Email"
+                                    value={email}
+                                    onChange={(e) => setEmail(e.target.value)}
+                                />
+                    </div>                                                                                            
+                        {/* <div>
                             <label htmlFor="email-address">
                                 Email address
                             </label>
@@ -53,9 +68,9 @@ const Signup = () => {
                                 required                                    
                                 placeholder="Email address"                                
                             />
-                        </div>
+                        </div> */}
 
-                        <div>
+                        {/* <div>
                             <label htmlFor="password">
                                 Password
                             </label>
@@ -67,14 +82,39 @@ const Signup = () => {
                                 required                                 
                                 placeholder="Password"              
                             />
-                        </div>                                             
+                        </div> */}
+
+                         <div className="mb-3">
+                                <label htmlFor="password" className="form-label">
+                                    Password
+                                </label>
+                                <input
+                                    id="password"
+                                    name="password"
+                                    type="password"
+                                    className="form-control"
+                                    required
+                                    placeholder="Enter your Password"
+                                    value={password}
+                                    onChange={(e) => setPassword(e.target.value)}
+                                />
+                            </div>                                             
                         
-                        <button
+                        {/* <button
                             type="submit" 
                             onClick={onSubmit}                        
                         >  
                             Sign up                                
-                        </button>
+                        </button> */}
+                        <div className='mb-3'>
+                                <button
+                                type='button'
+                                className='btn btn-primary'
+                                    onClick={onSubmit}
+                                >
+                                    Sign up  
+                                </button>
+                            </div>
                                                                      
                     </form>
                     {/* {error && <Alert variant="danger">{error}</Alert>} */}
@@ -87,7 +127,7 @@ const Signup = () => {
                         </NavLink>
                     </p>                   
                 </div>
-            </div>
+           
         </section>
     </main>
   )
