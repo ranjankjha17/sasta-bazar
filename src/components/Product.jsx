@@ -12,7 +12,7 @@ const Product = (props) => {
   }
   return (
     <div>   
-      <div className="d-flex flex-column m-5  z-20 border border-1 rounded-3 shadow-md shadow-lg p-5 mb-5 bg-body rounded" style={{ width: "28rem", height: "38rem"}}>
+      <div className="d-flex flex-column m-2  z-20 border border-1 rounded-3 shadow-md shadow-lg p-5 mb-5 bg-body rounded" style={{ width: "28rem", height: "38rem"}}>
       <Link to="/product" state={{ item: {...props} }}>
           <img src={image} className="card-img-top rounded mx-auto d-block" alt={title} style={{ width: "12rem", height: "15rem",objectFit:"contain" }} />
         </Link>
