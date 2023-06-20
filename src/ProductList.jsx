@@ -116,7 +116,7 @@ const ProductList = () => {
             </div>
 
             <div >
-                <div className="mt-4 d-flex flex-wrap justify-content-center">
+                <div className="mt-4 d-flex flex-wrap justify-content-start">
                     {
                         filteredProducts.map((e) => {
                             return (
