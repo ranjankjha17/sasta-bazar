@@ -45,7 +45,8 @@ const Cart = () => {
             {products.map(product => (
               <tr key={product.id}>
 
-                <td>{product.name}</td>
+                {/* <td>{product.title.split(' ').slice(0,3).join('')}</td> */}
+                <td><img src={product.image} height={50} width={50} alt={product.title.split(' ').slice(0,3).join('')}/></td>
                 <td>${product.price}</td>
                 <td>
                   <div className="btn-group" role="group" aria-label="Quantity">
