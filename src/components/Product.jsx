@@ -17,11 +17,11 @@ const Product = (props) => {
           <img src={image} className="card-img-top rounded mx-auto d-block" alt={title} style={{ width: "12rem", height: "15rem",objectFit:"contain" }} />
         </Link>
         <span className='mb-3 mt-3' style={{color:"#1a1a2c",backgroundColor:"#1a1a2c0d"}}>{category}</span>
-        <div className="card-body">
+        <div className="product-card-body">
           <h3 className="text-lg font-bold h-14 mb-3 text-truncate">{title}</h3>
           <p className='mb-3 text-sm text-truncate'>{description}</p>
           <div className='d-flex justify-content-between'>
-          <h3 className="card-text">${price}</h3>
+          <div className="product-card-text">${price}</div>
           <span className="rating star-fill fw-bold" style={{ color: "yellow" }}>*<span className='fs-4 fw-normal' style={{color:"#000"}}>{rating.rate}<span className='ffw-light text-muted fs-6'>({rating.count})</span></span></span>
           </div>
           <button onClick={handleAddToCart} className="btn-primary">Add to Cart</button>

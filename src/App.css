@@ -17,3 +17,16 @@
   width: 20rem;
   height: 38rem;
 }
+
+/* .product-card:hover{
+ 
+} */
+
+.product-card-body>h3{
+  font-size: 1rem;
+}
+
+.product-card-text{
+  font-size: 1.25rem;
+  font-weight: 700;
+}
