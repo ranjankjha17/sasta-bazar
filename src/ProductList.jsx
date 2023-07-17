@@ -35,47 +35,43 @@ const ProductList = () => {
     };
 
     const filteredProducts = productList
-    .filter((product) =>
-        product.title.toLowerCase().includes(searchTerm.toLowerCase())
-    )
-    .sort((a, b) => {
-        if (sortBy === '') {
-          return 0;
-        }
-        switch (sortBy) {
-          case 'priceAsc':
-            return a.price - b.price;
-          case 'priceDesc':
-            return b.price - a.price;
-          case 'nameAsc':
-            return a.title.localeCompare(b.title);
-          case 'nameDesc':
-            return b.title.localeCompare(a.title);
-          default:
-            return 0;
-        }
-      })
+        .filter((product) =>
+            product.title.toLowerCase().includes(searchTerm.toLowerCase())
+        )
+        .sort((a, b) => {
+            if (sortBy === '') {
+                return 0;
+            }
+            switch (sortBy) {
+                case 'priceAsc':
+                    return a.price - b.price;
+                case 'priceDesc':
+                    return b.price - a.price;
+                case 'nameAsc':
+                    return a.title.localeCompare(b.title);
+                case 'nameDesc':
+                    return b.title.localeCompare(a.title);
+                default:
+                    return 0;
+            }
+        })
 
     const handleSortByChange = (e) => {
         dispatch(setSortBy(e.target.value));
-      };
+    };
 
     if (isLoading) {
         return (
-            <div className='d-flex justify-content-center align-items-center' style={{marginTop:"12rem"}}>
-
-            
-            <div class="spinner-grow" style={{ height: "15rem", width: "15rem",backgroundColor:"#d63384"}} role="status">
-                <span class="visually-hidden">Loading...</span>
-            </div>
+            <div className='d-flex justify-content-center align-items-center' style={{ marginTop: "12rem" }}>
+                <div class="spinner-grow" style={{ height: "15rem", width: "15rem", backgroundColor: "#d63384" }} role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
             </div>
         )
     }
     return (
         <>
             <div className='d-flex row justify-content-between' style={{ paddingRight: "0.5rem" }}>
-
-
                 <div className='col-lg-4'>
                     <h2>Sasta Bazar</h2>
                 </div>
@@ -90,14 +86,9 @@ const ProductList = () => {
                     />
                 </div>
                 <div className='col-lg-4 mt-1' style={{ justifyContent: "end", display: "flex" }}>
-                    <CartIcon/>
+                    <CartIcon />
                 </div>
-
-
-
-
             </div>
-
             <div className='row'>
                 <div>
                     <label htmlFor="sortBy">Sort By:</label>
