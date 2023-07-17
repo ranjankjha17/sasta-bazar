@@ -16,11 +16,12 @@
 .product-card{
   width: 20rem;
   height: 38rem;
+  transition: transform .2s; 
 }
 
-/* .product-card:hover{
- 
-} */
+.product-card:hover{
+  transform: scale(1.05); 
+}
 
 .product-card-body>h3{
   font-size: 1rem;
