@@ -24,7 +24,7 @@ const Product = (props) => {
           <h3 className="card-text">${price}</h3>
           <span className="rating star-fill fw-bold" style={{ color: "yellow" }}>*<span className='fs-4 fw-normal' style={{color:"#000"}}>{rating.rate}<span className='ffw-light text-muted fs-6'>({rating.count})</span></span></span>
           </div>
-          <button onClick={handleAddToCart} className="btn-primary">ADD to Cart</button>
+          <button onClick={handleAddToCart} className="btn-primary">Add to Cart</button>
         </div>
       </div>
 

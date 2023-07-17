@@ -4,6 +4,7 @@
   width: 100%;
   border: none;
   border-radius: 5px;
+  height: 2rem;
 }
 .btn-primary:hover{
   background-color: #ffffff;
