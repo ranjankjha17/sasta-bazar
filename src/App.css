@@ -12,3 +12,8 @@
   border: 2px solid #d63384;
   font-weight: 500;
 }
+
+.product-card{
+  width: 20rem;
+  height: 38rem;
+}
