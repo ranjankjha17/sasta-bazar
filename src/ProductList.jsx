@@ -136,7 +136,7 @@ const ProductList = () => {
                 />
             </div>
             <div className='row'>
-                <div className="mt-4 d-flex flex-wrap justify-content-center product-list hero-banner-2">
+                <div className="mt-4 d-flex flex-wrap justify-content-center product-list product-list-2">
                     {
                         filteredProducts.slice(8,filteredProducts.length).map((e) => {
                             return (
