@@ -11,12 +11,13 @@ import ProductSearch from './components/ProductSearch';
 import Signup from './Registration/Signup';
 import Login from './Registration/Login';
 import Dashboard from './Registration/Dashboard';
+import Banner from './components/Banner';
 
 function App() {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(loadCartFromStorage()); // Load cart data from local storage
+    dispatch(loadCartFromStorage()); 
   }, [dispatch]);
   return (
     <div>
@@ -29,6 +30,7 @@ function App() {
         <Route exact path="/signup" element={<Signup/>} />
         <Route exact path="/login" element={<Login/>} />
         <Route exact path="/dashboard" element={<Dashboard/>} />
+        <Route exact path="/carousel" element={<Banner/>}/>
       </Routes>
       </BrowserRouter>     
     </div>

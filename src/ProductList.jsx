@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import CartIcon from './components/CartIcon'
 import Product from './components/Product'
 import { setSortBy } from './productsSlice'
+import Banner from './components/Banner'
 const ProductList = () => {
     const [isLoading, setIsLoading] = useState(true);
 
@@ -90,6 +91,11 @@ const ProductList = () => {
                 </div>
             </div>
             <div className='row'>
+                <div className='col-lg-12 col-xl-12 col-xxl-12'>
+                    <Banner />
+                </div>
+            </div>
+            {/* <div className='row'>
                 <div>
                     <label htmlFor="sortBy">Sort By:</label>
                     <select
@@ -104,10 +110,10 @@ const ProductList = () => {
                         <option value="nameDesc">Name - Z to A</option>
                     </select>
                 </div>
-            </div>
+            </div> */}
 
-            <div >
-                <div className="mt-4 d-flex flex-wrap justify-content-center">
+            <div className='row'>
+                <div className="mt-4 d-flex flex-wrap justify-content-center product-list">
                     {
                         filteredProducts.map((e) => {
                             return (
@@ -120,8 +126,15 @@ const ProductList = () => {
                     }
 
                 </div>
-            </div>
 
+            </div>
+            <div className='row'>
+                <img
+                    // className="hidden md:block md:col-span-full"
+                    src="https://bit.ly/2Zekxt8"
+                    alt="advar"
+                />
+            </div>
 
         </>
     )

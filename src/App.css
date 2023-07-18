@@ -31,3 +31,14 @@
   font-size: 1.25rem;
   font-weight: 700;
 }
+
+.hero-banner{
+  position: relative;
+  z-index: 10;
+}
+.product-list{
+  position: absolute;
+  z-index: 20;
+  top: 30rem;
+  right: 0;
+}
