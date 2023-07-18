@@ -115,7 +115,7 @@ const ProductList = () => {
             <div className='row'>
                 <div className="mt-4 d-flex flex-wrap justify-content-center product-list">
                     {
-                        filteredProducts.map((e) => {
+                        filteredProducts.slice(0,8).map((e) => {
                             return (
 
                                 <Product {...e} key={e.id} />

@@ -30,7 +30,6 @@ function App() {
         <Route exact path="/signup" element={<Signup/>} />
         <Route exact path="/login" element={<Login/>} />
         <Route exact path="/dashboard" element={<Dashboard/>} />
-        <Route exact path="/carousel" element={<Banner/>}/>
       </Routes>
       </BrowserRouter>     
     </div>
