@@ -42,3 +42,8 @@
   top: 30rem;
   right: 0;
 }
+.hero-banner-2{
+  top: 60rem;
+  position: relative;
+  z-index: 20;
+}

@@ -130,7 +130,7 @@ const ProductList = () => {
             </div>
             <div className='row'>
                 <img
-                    // className="hidden md:block md:col-span-full"
+                    className="hidden md:block md:col-span-full hero-banner-2"
                     src="https://bit.ly/2Zekxt8"
                     alt="advar"
                 />
