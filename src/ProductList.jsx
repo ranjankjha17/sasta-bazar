@@ -5,6 +5,7 @@ import Product from './components/Product'
 import { setSortBy } from './productsSlice'
 import Banner from './components/Banner'
 import Navbars from './components/Navbar'
+import Footer from './components/Footer'
 const ProductList = () => {
     const [isLoading, setIsLoading] = useState(true);
 
@@ -31,7 +32,7 @@ const ProductList = () => {
         fetchProducts()
     }, [dispatch])
 
-      const filteredProducts = productList
+    const filteredProducts = productList
         .filter((product) =>
             product.title.toLowerCase().includes(searchTerm.toLowerCase())
         )
@@ -67,9 +68,9 @@ const ProductList = () => {
         )
     }
     return (
-        <>           
+        <>
             <div className='row'>
-                <Navbars setSearchTerm={setSearchTerm}/>
+                <Navbars setSearchTerm={setSearchTerm} />
             </div>
             <div className='row'>
                 <div className='col-lg-12 col-xl-12 col-xxl-12'>
@@ -131,6 +132,9 @@ const ProductList = () => {
 
                 </div>
 
+            </div>
+            <div className='row'>
+                <Footer />
             </div>
         </>
     )
