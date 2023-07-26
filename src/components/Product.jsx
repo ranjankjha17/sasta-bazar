@@ -22,7 +22,7 @@ const Product = (props) => {
           <p className='mb-3 text-sm text-truncate'>{description}</p>
           <div className='d-flex justify-content-between'>
           <div className="product-card-text">${price}</div>
-          <span className="rating star-fill fw-bold" style={{ color: "yellow" }}>*<span className='fs-4 fw-normal' style={{color:"#000"}}>{rating.rate}<span className='ffw-light text-muted fs-6'>({rating.count})</span></span></span>
+          <span className="rating star-fill fw-bold" style={{ color: "#ffc107" }}>*<span className='fs-6 fw-normal' style={{color:"#000"}}>{rating.rate}<span className='ffw-light text-muted fs-6'>({rating.count})</span></span></span>
           </div>
           <button onClick={handleAddToCart} className="btn-primary">Add to Cart</button>
         </div>
