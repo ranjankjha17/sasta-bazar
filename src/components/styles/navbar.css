@@ -1,0 +1,31 @@
+.nav_button{
+    padding: 1em 2em;
+    border: none;
+    border-radius:5px;
+    outline: none;
+    background-color: var(--bs-primary-color);
+    font-weight: 700;
+    color: var(--bs-light-text-color);
+    text-decoration: none;
+    /* margin-left: 1rem; */
+    
+  }
+  .nav_button:hover{
+    color: #FFFFFF;
+  }
+  .nav_button_area{
+    margin-top: 3rem;
+  }
+  .abcd a{
+    font-size: 14px;
+    color: #737373;
+    font-weight: bold;
+  }
+  .logo{
+    font-size: 24px;
+    color:#252B42;
+    font-weight: bold;
+  }
+  .logo a{
+    font-size: 14px;
+  }

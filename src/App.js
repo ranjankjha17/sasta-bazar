@@ -11,7 +11,6 @@ import ProductSearch from './components/ProductSearch';
 import Signup from './Registration/Signup';
 import Login from './Registration/Login';
 import Dashboard from './Registration/Dashboard';
-import Banner from './components/Banner';
 
 function App() {
   const dispatch = useDispatch();

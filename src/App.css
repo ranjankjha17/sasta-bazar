@@ -53,3 +53,27 @@
   top: 2rem;
   
 }
+.header-bottom{
+  background-color: #232f3e;
+  height: 3rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-link{
+  font-size: 1rem;
+  font-weight: 500;
+  color: #ffffff;
+  padding: 8px 9px 8px 9px;
+  margin: 1px 0 1px 0;
+  height: 100%;
+  position: absolute;
+  text-decoration: none;  
+}
+.header-link:hover{
+  border: 2px solid #ffffff;
+  padding: 8px 9px 8px 9px;
+  margin: 1px 0 1px 0;
+  color: #ffffff;
+  position: absolute;  
+}

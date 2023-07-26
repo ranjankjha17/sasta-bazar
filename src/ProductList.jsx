@@ -1,10 +1,10 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import CartIcon from './components/CartIcon'
 import Product from './components/Product'
 import { setSortBy } from './productsSlice'
 import Banner from './components/Banner'
+import Navbars from './components/Navbar'
 const ProductList = () => {
     const [isLoading, setIsLoading] = useState(true);
 
@@ -31,11 +31,7 @@ const ProductList = () => {
         fetchProducts()
     }, [dispatch])
 
-    const handleSearch = (event) => {
-        setSearchTerm(event.target.value);
-    };
-
-    const filteredProducts = productList
+      const filteredProducts = productList
         .filter((product) =>
             product.title.toLowerCase().includes(searchTerm.toLowerCase())
         )
@@ -71,24 +67,9 @@ const ProductList = () => {
         )
     }
     return (
-        <>
-            <div className='d-flex row justify-content-between' style={{ paddingRight: "0.5rem" }}>
-                <div className='col-lg-4'>
-                    <h2>Sasta Bazar</h2>
-                </div>
-                <div className='col-lg-4'>
-                    <input
-                        type="text"
-                        className="form-control"
-                        style={{ borderColor: "#d63384" }}
-                        value={searchTerm}
-                        onChange={handleSearch}
-                        placeholder='search product'
-                    />
-                </div>
-                <div className='col-lg-4 mt-1' style={{ justifyContent: "end", display: "flex" }}>
-                    <CartIcon />
-                </div>
+        <>           
+            <div className='row'>
+                <Navbars setSearchTerm={setSearchTerm}/>
             </div>
             <div className='row'>
                 <div className='col-lg-12 col-xl-12 col-xxl-12'>
@@ -115,7 +96,7 @@ const ProductList = () => {
             <div className='row'>
                 <div className="mt-4 d-flex flex-wrap justify-content-center product-list">
                     {
-                        filteredProducts.slice(0,8).map((e) => {
+                        filteredProducts.slice(0, 8).map((e) => {
                             return (
 
                                 <Product {...e} key={e.id} />
@@ -138,7 +119,7 @@ const ProductList = () => {
             <div className='row'>
                 <div className="mt-4 d-flex flex-wrap justify-content-center product-list product-list-2">
                     {
-                        filteredProducts.slice(8,filteredProducts.length).map((e) => {
+                        filteredProducts.slice(8, filteredProducts.length).map((e) => {
                             return (
 
                                 <Product {...e} key={e.id} />
