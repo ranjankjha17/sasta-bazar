@@ -61,7 +61,7 @@ const ProductList = () => {
     if (isLoading) {
         return (
             <div className='d-flex justify-content-center align-items-center' style={{ marginTop: "12rem" }}>
-                <div class="spinner-grow" style={{ height: "15rem", width: "15rem", backgroundColor: "#d63384" }} role="status">
+                <div class="spinner-grow" style={{ height: "7rem", width: "7rem", backgroundColor: "#d63384" }} role="status">
                     <span class="visually-hidden">Loading...</span>
                 </div>
             </div>
